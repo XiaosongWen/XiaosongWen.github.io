@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		Stack &amp; Queue | 
 	 
 	Xiaosong Wen&#39;s Blog
 	</title>
@@ -138,7 +140,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
 										02_Stack-Queue
 									</a>
@@ -165,113 +167,93 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
+		<h1 id="article-title">
+
+	02_Stack-Queue
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
-				<h2 class="index-title">
-					02_Stack-Queue
-				</h2>
-				<div class="index-brief">
-					Stack &amp; Queue
+	<span>Xiaosong Tomas Wen</span>
+	<span>2021-06-10 23:03:56</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
 
+    
+		<span>Tags：</span>
+            
+    
+		</div>
 
-
-Stack
-Queue
-
-
-
-
-LIFO
-FIFO
-
-
-Operation
-push, pop, top
-enqueue, dequeue, peek
-
-
-Java Interface
-Deque
-Queue
-
-
-Java Classes
-ArrayDequ
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
-				<h2 class="index-title">
-					03_Tree
-				</h2>
-				<div class="index-brief">
-					TreeBalanced binary tree:The height of the left and right subtrees of every node differ by 1 or less
-
-If a tree has n number of nodes, and it is balan
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/data-structure/">data structure</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/01_Linkedlist/">
-				<h2 class="index-title">
-					01_Linkedlist
-				</h2>
-				<div class="index-brief">
-					Linked ListKey point:
-When you want to dereference a ListNode, make sure it is not a null pointer
-NEVER EVER lose the control of the head pointer of t
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/data-structure/">data structure</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
 
+<div id="article-content">
+	<h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><table>
+<thead>
+<tr>
+<th></th>
+<th>Stack</th>
+<th>Queue</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>LIFO</td>
+<td>FIFO</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>push, pop, top</td>
+<td>enqueue, dequeue, peek</td>
+</tr>
+<tr>
+<td>Java Interface</td>
+<td>Deque</td>
+<td>Queue</td>
+</tr>
+<tr>
+<td>Java Classes</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayDeque.html">ArrayDeque</a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedList.html">LinkedList</a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedList.html">LinkedList</a></td>
+</tr>
+<tr>
+<td>Methods (<em>Throws exception</em>)</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#addFirst(E)"><code>addFirst(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#removeFirst()"><code>removeFirst()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#getFirst()"><code>getFirst()</code></a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#add(E)"><code>add(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#remove()"><code>remove()</code></a>,<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#element()"><code>element()</code></a></td>
+</tr>
+<tr>
+<td>Methods(<em>Returns special value</em>)</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#offerFirst(E)"><code>offerFirst(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#pollFirst()"><code>pollFirst()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#peekFirst()"><code>peekFirst()</code></a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#offer(E)"><code>offer(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#poll()"><code>poll()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#peek()"><code>peek()</code></a></td>
+</tr>
+</tbody></table>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
+                03_Tree
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

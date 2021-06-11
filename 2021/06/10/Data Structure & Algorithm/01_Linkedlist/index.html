@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		Linked List | 
 	 
 	Xiaosong Wen&#39;s Blog
 	</title>
@@ -129,7 +131,7 @@ var _hmt = _hmt || [];
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/01_Linkedlist/">
 										01_Linkedlist
 									</a>
@@ -165,113 +167,129 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
+		<h1 id="article-title">
+
+	01_Linkedlist
+</h1>
+<div class="article-meta">
 	
-		<div class="index-li">
-			<a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
-				<h2 class="index-title">
-					02_Stack-Queue
-				</h2>
-				<div class="index-brief">
-					Stack &amp; Queue
+	<span>Xiaosong Tomas Wen</span>
+	<span>2021-06-10 21:38:18</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/data-structure/">data structure</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
 
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/linked-list/">linked list</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/recursion/">recursion</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
 
-
-Stack
-Queue
-
-
-
-
-LIFO
-FIFO
-
-
-Operation
-push, pop, top
-enqueue, dequeue, peek
-
-
-Java Interface
-Deque
-Queue
-
-
-Java Classes
-ArrayDequ
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
-				<h2 class="index-title">
-					03_Tree
-				</h2>
-				<div class="index-brief">
-					TreeBalanced binary tree:The height of the left and right subtrees of every node differ by 1 or less
-
-If a tree has n number of nodes, and it is balan
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/data-structure/">data structure</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/01_Linkedlist/">
-				<h2 class="index-title">
-					01_Linkedlist
-				</h2>
-				<div class="index-brief">
-					Linked ListKey point:
-When you want to dereference a ListNode, make sure it is not a null pointer
-NEVER EVER lose the control of the head pointer of t
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-06-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/data-structure/">data structure</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-	
-	<div id="index-paginator">
-		
-	</div>
 </div>
 
+<div id="article-content">
+	<h1 id="Linked-List"><a href="#Linked-List" class="headerlink" title="Linked List"></a>Linked List</h1><h2 id="Key-point"><a href="#Key-point" class="headerlink" title="Key point:"></a>Key point:</h2><ul>
+<li>When you want to dereference a ListNode, make sure it is not a null pointer</li>
+<li>NEVER EVER lose the control of the head pointer of the LinkedList</li>
+<li>Only use <b>dummy head</b> when we want to build a LinkedList from scratch, to avoid null pointer dereference</li>
+<li>Maintain a <b>tail pointer</b>  when we want to frequently append a new Node to the end of LinkedList</li>
+</ul>
+<h2 id="Array-VS-Linked-List"><a href="#Array-VS-Linked-List" class="headerlink" title="Array VS Linked List:"></a>Array VS Linked List:</h2><ul>
+<li>Memory Layout<ul>
+<li>Array: consecutive allocated memory space, no overhead</li>
+<li>Linked List: con- consecutive, overhead of of multiple objects with the ‘next’ reference</li>
+</ul>
+</li>
+<li>(Random) access time:<ul>
+<li>Array: O(1)</li>
+<li>LinkedList: O(n)</li>
+</ul>
+</li>
+<li>Search time:<ul>
+<li>Non sorted: Array: O(n); LinkedList: O(n)</li>
+<li>Sorted: Array: O(logn); LinkedList O(n)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reverse-a-Linked-List"><a href="#Reverse-a-Linked-List" class="headerlink" title="Reverse a Linked List:"></a>Reverse a Linked List:</h2><h3 id="Iterative-Way"><a href="#Iterative-Way" class="headerlink" title="Iterative Way:"></a>Iterative Way:</h3><pre><code class="java">while (current != null)&#123;
+    next = current.next; // store the next element 
+    currrent.next = pre; // reverse current node
+    pre = current; // update;
+    current = next;
+&#125;
+return pre;
+</code></pre>
+<h3 id="Recursive-Way"><a href="#Recursive-Way" class="headerlink" title="Recursive Way:"></a>Recursive Way:</h3><p>n1 -&gt; n2 -&gt; n3 ……  ==&gt;   n1 -&gt;|| n2 -&gt; n3 ……</p>
+<ul>
+<li>assume the list start from n2 is already reversed: here we have … -&gt; n3 -&gt; n2;</li>
+<li>we need to revert n1, we want n2 -&gt; n1 -&gt; null;</li>
+<li>we can easily assess n2 by n1.next; since n1 is still point to n2, </li>
+</ul>
+<pre><code class="java">newHead = reverse(head.next);
+head.next.next = head;
+head.next = null;
+return newHead;
+</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  03_Tree
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>
