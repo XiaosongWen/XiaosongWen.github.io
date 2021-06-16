@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		Tree | 
+		Stack &amp; Queue | 
 	 
 	Xiaosong Wen&#39;s Blog
 	</title>
@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
 										02_Stack-Queue
 									</a>
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
 										03_Tree
 									</a>
@@ -178,12 +178,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	03_Tree
+	02_Stack-Queue
 </h1>
 <div class="article-meta">
 	
 	<span>Xiaosong Tomas Wen</span>
-	<span>2021-06-10 22:47:38</span>
+	<span>2021-06-10 23:03:56</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -213,7 +213,15 @@ var _hmt = _hmt || [];
                 
                     <span>
                         <i class="fa fa-tag" aria-hidden="true">
-                        <a href="/tags/tree/">tree</a>
+                        <a href="/tags/stack/">stack</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/queue/">queue</a>
                         </i>
                     </span>
                 
@@ -224,19 +232,45 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h1 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h1><h2 id="Balanced-binary-tree"><a href="#Balanced-binary-tree" class="headerlink" title="Balanced binary tree:"></a><strong>Balanced binary tree:</strong></h2><p>The height of the left and right subtrees of every node differ by 1 or less</p>
-<ul>
-<li>If a tree has n number of nodes, and it is balanced, then the height(level) of the tree = O(log(n))</li>
-<li><strong>CAVEAT</strong>: if a tree has n nodes, but we don’t known if it is <strong>balanced</strong>, then the height(level) of the tree= O(n)</li>
-</ul>
-<h1 id="Complete-binary-tree"><a href="#Complete-binary-tree" class="headerlink" title="Complete binary tree:"></a><strong>Complete binary tree:</strong></h1><p>A binary tree in which every level, <em>except possible the last</em>, is completely filled, and all nodes are as left as possible.</p>
-<ul>
-<li>If a tree is a complete tree, then it must be a balanced tree.</li>
-</ul>
-<h1 id="Binary-Search-tree"><a href="#Binary-Search-tree" class="headerlink" title="Binary Search tree:"></a><strong>Binary Search tree:</strong></h1><p>For every single node in the tree, the values in its left subtrees are all smaller than its value, and the values in its right subtree are all larger than its value.</p>
-<ul>
-<li>The in-order sequence of a BST must form an ascending order</li>
-</ul>
+	<h1 id="Stack-amp-Queue"><a href="#Stack-amp-Queue" class="headerlink" title="Stack &amp; Queue"></a>Stack &amp; Queue</h1><table>
+<thead>
+<tr>
+<th></th>
+<th>Stack</th>
+<th>Queue</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>LIFO</td>
+<td>FIFO</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>push, pop, top</td>
+<td>enqueue, dequeue, peek</td>
+</tr>
+<tr>
+<td>Java Interface</td>
+<td>Deque</td>
+<td>Queue</td>
+</tr>
+<tr>
+<td>Java Classes</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayDeque.html">ArrayDeque</a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedList.html">LinkedList</a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/LinkedList.html">LinkedList</a></td>
+</tr>
+<tr>
+<td>Methods (<em>Throws exception</em>)</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#addFirst(E)"><code>addFirst(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#removeFirst()"><code>removeFirst()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#getFirst()"><code>getFirst()</code></a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#add(E)"><code>add(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#remove()"><code>remove()</code></a>,<a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#element()"><code>element()</code></a></td>
+</tr>
+<tr>
+<td>Methods(<em>Returns special value</em>)</td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#offerFirst(E)"><code>offerFirst(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#pollFirst()"><code>pollFirst()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Deque.html#peekFirst()"><code>peekFirst()</code></a></td>
+<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#offer(E)"><code>offer(e)</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#poll()"><code>poll()</code></a>, <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#peek()"><code>peek()</code></a></td>
+</tr>
+</tbody></table>
 
 </div>
 
@@ -244,16 +278,16 @@ var _hmt = _hmt || [];
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
+              <a href="/2021/06/16/Data%20Structure%20&%20Algorithm/04-Bit/">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  02_Stack-Queue
+                  04-Bit
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2021/06/10/Data%20Structure%20&%20Algorithm/01_Linkedlist/">
-                01_Linkedlist
+              <a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
+                03_Tree
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

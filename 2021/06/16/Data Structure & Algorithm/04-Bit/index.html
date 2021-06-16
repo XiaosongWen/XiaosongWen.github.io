@@ -141,6 +141,15 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
+										02_Stack-Queue
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
 										03_Tree
 									</a>
@@ -179,10 +188,35 @@ var _hmt = _hmt || [];
     
 		<span>Categories：</span>
             
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/data-structure/">data structure</a>
+                        </i>
+                      
+                    </span>
+                
+            
     
 
     
 		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/java/">java</a>
+                        </i>
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/bit/">bit</a>
+                        </i>
+                    </span>
+                
             
     
 		</div>
@@ -190,7 +224,66 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	
+	<h1 id="Bit-Representation"><a href="#Bit-Representation" class="headerlink" title="Bit Representation"></a>Bit Representation</h1><ul>
+<li>Positive int:<ul>
+<li>5: 0b <strong>0</strong>000 0000 0000 … … 0000 0101</li>
+<li>Java MAX_INT: 2^31 - 1 = 2147483647</li>
+</ul>
+</li>
+<li>Negative int:<ul>
+<li>Two’s complement: (取反+1）</li>
+<li>-5: 0b <strong>1</strong>111 1111 1111 … … 1111 1011</li>
+</ul>
+</li>
+<li>Conversion between different type:</li>
+</ul>
+<p>JAVA:</p>
+<ul>
+<li>bytes:             8 bits            signed</li>
+<li>short:            16 bits           signed</li>
+<li>int:                32 bits           signed</li>
+<li>long:             62 bits           signed</li>
+<li>char:             16 bits           unsigned</li>
+<li>Keep the same bit widths: binary representation does NOT change</li>
+<li>Extending bit width: prepend <strong>zero</strong> if the sources is unsigned; prepend <strong>sign</strong> otherwise</li>
+<li>Truncate the widths: Truncate the high bits:</li>
+</ul>
+<h1 id="Bit-Operation"><a href="#Bit-Operation" class="headerlink" title="Bit Operation:"></a>Bit Operation:</h1><ul>
+<li><p>&amp; and</p>
+</li>
+<li><p>| or</p>
+</li>
+<li><p>~ not</p>
+</li>
+<li><p>^ xor</p>
+</li>
+<li><p>&lt;&lt; left shift</p>
+</li>
+<li><p>&gt; &gt; right shift, fill the sign after shift</p>
+</li>
+<li><p>&gt; &gt; &gt; logical right shift</p>
+</li>
+</ul>
+<h1 id="Common-usage"><a href="#Common-usage" class="headerlink" title="Common usage:"></a>Common usage:</h1><h2 id="Bit-Sester"><a href="#Bit-Sester" class="headerlink" title="Bit Sester:"></a>Bit Sester:</h2><p>get k-th bit of x: (x &gt;&gt; k) &amp; 1</p>
+<h2 id="Bit-Setter-Resetter"><a href="#Bit-Setter-Resetter" class="headerlink" title="Bit Setter (Resetter):"></a>Bit Setter (Resetter):</h2><p>set k-th bit of x to 1: x  |= (1 &lt;&lt; k)</p>
+<p>set k-th bit of x to 0: x  &amp;= ~(1 &lt;&lt; k)</p>
+<h2 id="Operator-Priority"><a href="#Operator-Priority" class="headerlink" title="Operator Priority:"></a>Operator Priority:</h2><ol>
+<li>postfix: exp++, exp–</li>
+<li>unary: ++exp, –exp,  +exp, -exp,  ~, !</li>
+<li>multiplicative: *, /</li>
+<li>additive: + / -</li>
+<li>shift: &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</li>
+<li>relational: &lt;, &gt;, &lt;=, &gt;=, instanceof</li>
+<li>equality: ==, !=</li>
+<li>&amp;</li>
+<li>^</li>
+<li>|</li>
+<li>&amp;&amp;</li>
+<li>||</li>
+<li>temary: ? :</li>
+<li>assignment: =, +=, -= ….</li>
+</ol>
+
 </div>
 
 
@@ -200,8 +293,8 @@ var _hmt = _hmt || [];
         </div>
         <div class="item right">
             
-              <a href="/2021/06/10/Data%20Structure%20&%20Algorithm/03_Tree/">
-                03_Tree
+              <a href="/2021/06/11/Data%20Structure%20&%20Algorithm/02_Stack-Queue/">
+                02_Stack-Queue
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
